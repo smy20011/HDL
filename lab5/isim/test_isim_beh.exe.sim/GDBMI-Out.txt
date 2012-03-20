@@ -1,0 +1,150 @@
+&"This is a Full version of ISim.\n"
+(isim-gdb)
+&"WARNING:  For instance uut/memoryInstr/, width 1 of formal port memWrite is not equal to width 32 of actual constant.\n"
+(isim-gdb)
+&"WARNING:  For instance uut/memoryInstr/, width 1 of formal port memRead is not equal to width 32 of actual constant.\n"
+(isim-gdb)
+
+(isim-gdb)
+=elaboration-done,precision="-12"
+(isim-gdb)
+1^done
+(isim-gdb)
+2^done
+(isim-gdb)
+3^done,status="stopped",reason="run-complete",now="0"
+(isim-gdb)
+4^done,status="stopped",reason="run-complete",now="0"
+(isim-gdb)
+5^done,value="x"
+(isim-gdb)
+6^done,result=["27 510",""]
+(isim-gdb)
+7^done,result=["28 511",""]
+(isim-gdb)
+8^running
+(isim-gdb)
+&"Simulator is doing circuit initialization process.\n"
+(isim-gdb)
+&"Finished circuit initialization process.\n"
+(isim-gdb)
+8*stopped,reason="run-complete",now="1000000"
+(isim-gdb)
+9^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+10^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+11^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+12^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+13^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+14^done,value="St0"
+(isim-gdb)
+15^done,result=["32 444",""]
+(isim-gdb)
+16^done,result=["34 445",""]
+(isim-gdb)
+17^done,result=["36 0",""]
+(isim-gdb)
+18^done,result=["37 1",""]
+(isim-gdb)
+19^done,result=["38 2",""]
+(isim-gdb)
+20^done,result=["39 3",""]
+(isim-gdb)
+21^done,result=["40 4",""]
+(isim-gdb)
+22^done,result=["41 5",""]
+(isim-gdb)
+23^done,result=["42 6",""]
+(isim-gdb)
+24^done,result=["43 7",""]
+(isim-gdb)
+25^done,result=["44 0 9 8",""]
+(isim-gdb)
+26^done,result=["45 0 41 10",""]
+(isim-gdb)
+27^done,result=["46 0 73 42",""]
+(isim-gdb)
+28^done,result=["47 0 105 74",""]
+(isim-gdb)
+29^done,result=["48 0 137 106",""]
+(isim-gdb)
+30^done,result=["49 0 169 138",""]
+(isim-gdb)
+31^done,result=["50 0 201 170",""]
+(isim-gdb)
+32^done,result=["51 0 233 202",""]
+(isim-gdb)
+33^done,result=["52 0 237 234",""]
+(isim-gdb)
+34^done,result=["53 238",""]
+(isim-gdb)
+35^done,result=["54 0 270 239",""]
+(isim-gdb)
+36^done,result=["61 0 543 512",""]
+(isim-gdb)
+37^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+38^done,value="00000000100000110010100000100010"
+(isim-gdb)
+39^done,result=["186 0 73 42",""]
+(isim-gdb)
+40^done,result=["188 0 435 404",""]
+(isim-gdb)
+41^done,result=["190 0 237 234",""]
+(isim-gdb)
+42^done,result=["192 5838",""]
+(isim-gdb)
+43^done,result=["196 0 5870 5839",""]
+(isim-gdb)
+44^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+45^done,value="00000000000000000000000000000010"
+(isim-gdb)
+46^done,result=["202 0 509 478",""]
+(isim-gdb)
+47^done,result=["204 2",""]
+(isim-gdb)
+48^done,result=["206 1",""]
+(isim-gdb)
+49^done,result=["208 238",""]
+(isim-gdb)
+50^done,result=["210 0 41 10",""]
+(isim-gdb)
+51^done,result=["212 0 5902 5871",""]
+(isim-gdb)
+52^running
+(isim-gdb)
+53^done,status="running",now="1000000"
+(isim-gdb)
+52*stopped,reason="run-complete",now="0"
+(isim-gdb)
+54^done,status="stopped",reason="run-complete",now="0"
+(isim-gdb)
+55^done,status="stopped",reason="run-complete",now="0"
+(isim-gdb)
+56^done,value="x"
+(isim-gdb)
+57^running
+(isim-gdb)
+&"Simulator is doing circuit initialization process.\n"
+(isim-gdb)
+&"Finished circuit initialization process.\n"
+(isim-gdb)
+57*stopped,reason="run-complete",now="1000000"
+(isim-gdb)
+58^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+59^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+60^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+61^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+62^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+63^exit
+(isim-gdb)

@@ -1,0 +1,33 @@
+Running: C:\Xilinx\11.1\ISE\bin\nt\unwrapped\fuse.exe -ise C:/Documents and Settings/lab5/lab5.ise -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Documents and Settings/lab5/test_isim_beh.exe -prj C:/Documents and Settings/lab5/test_beh.prj test glbl 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Documents and Settings/lab5/reg.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/lab5/memory.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/lab5/ctr.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/lab5/aluCtr.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/lab5/alu.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/lab5/cpuSingleCycle.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/lab5/test.v" into library work
+Analyzing Verilog file "C:/Xilinx/11.1/ISE/verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Documents and Settings/lab5/cpuSingleCycle.v" Line 83: Size mismatch in connection of port <memWrite>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:/Documents and Settings/lab5/cpuSingleCycle.v" Line 84: Size mismatch in connection of port <memRead>. Formal port size is 1-bit while actual signal size is 32-bit.
+Completed static elaboration
+Fuse Memory Usage: 57184 KB
+Fuse CPU Usage: 124 ms
+Compiling module ctr
+Compiling module mem
+Compiling module regeister
+Compiling module aluCtr
+Compiling module Alu
+Compiling module pcHandler
+Compiling module cpuSingleCycle
+Compiling module test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable C:/Documents and Settings/lab5/test_isim_beh.exe
+Fuse Memory Usage: 61540 KB
+Fuse CPU Usage: 218 ms

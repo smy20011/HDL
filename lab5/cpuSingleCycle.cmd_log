@@ -1,0 +1,104 @@
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc cpuSingleCycle.ngd  
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
+netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 

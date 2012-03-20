@@ -1,0 +1,63 @@
+1-ntrace -on
+2-ntrace -on
+3-target-exec-status
+4-target-exec-status
+5-var-evaluate-expression 27
+6-ntrace-select -n 27 -on
+7-ntrace-select -n 28 -on
+8-exec-continue -time 1000000
+9-target-exec-status
+10-target-exec-status
+11-target-exec-status
+12-target-exec-status
+13-target-exec-status
+14-var-evaluate-expression 32
+15-ntrace-select -n 32 -on
+16-ntrace-select -n 34 -on
+17-ntrace-select -n 36 -on
+18-ntrace-select -n 37 -on
+19-ntrace-select -n 38 -on
+20-ntrace-select -n 39 -on
+21-ntrace-select -n 40 -on
+22-ntrace-select -n 41 -on
+23-ntrace-select -n 42 -on
+24-ntrace-select -n 43 -on
+25-ntrace-select -n 44 -on
+26-ntrace-select -n 45 -on
+27-ntrace-select -n 46 -on
+28-ntrace-select -n 47 -on
+29-ntrace-select -n 48 -on
+30-ntrace-select -n 49 -on
+31-ntrace-select -n 50 -on
+32-ntrace-select -n 51 -on
+33-ntrace-select -n 52 -on
+34-ntrace-select -n 53 -on
+35-ntrace-select -n 54 -on
+36-ntrace-select -n 61 -on
+37-target-exec-status
+38-var-evaluate-expression 186
+39-ntrace-select -n 186 -on
+40-ntrace-select -n 188 -on
+41-ntrace-select -n 190 -on
+42-ntrace-select -n 192 -on
+43-ntrace-select -n 196 -on
+44-target-exec-status
+45-var-evaluate-expression 202
+46-ntrace-select -n 202 -on
+47-ntrace-select -n 204 -on
+48-ntrace-select -n 206 -on
+49-ntrace-select -n 208 -on
+50-ntrace-select -n 210 -on
+51-ntrace-select -n 212 -on
+52-exec-run
+53-target-exec-status
+54-target-exec-status
+55-target-exec-status
+56-var-evaluate-expression 27
+57-exec-continue -time 1000000
+58-target-exec-status
+59-target-exec-status
+60-target-exec-status
+61-target-exec-status
+62-target-exec-status
+63-gdb-exit

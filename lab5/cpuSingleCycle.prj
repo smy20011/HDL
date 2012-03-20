@@ -1,0 +1,6 @@
+verilog work "reg.v"
+verilog work "memory.v"
+verilog work "ctr.v"
+verilog work "aluCtr.v"
+verilog work "alu.v"
+verilog work "cpuSingleCycle.v"

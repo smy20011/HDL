@@ -1,0 +1,993 @@
+Release 11.1 - xst L.33 (nt)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: cpuSingleCycle.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpuSingleCycle.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpuSingleCycle"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : cpuSingleCycle
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : cpuSingleCycle.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "reg.v" in library work
+Compiling verilog file "memory.v" in library work
+Module <regeister> compiled
+Compiling verilog file "ctr.v" in library work
+Module <mem> compiled
+Compiling verilog file "aluCtr.v" in library work
+Module <ctr> compiled
+Compiling verilog file "alu.v" in library work
+Module <aluCtr> compiled
+Compiling verilog file "cpuSingleCycle.v" in library work
+Module <Alu> compiled
+Module <pcHandler> compiled
+Module <cpuSingleCycle> compiled
+No errors in compilation
+Analysis of file <"cpuSingleCycle.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <cpuSingleCycle> in library <work>.
+
+Analyzing hierarchy for module <ctr> in library <work>.
+
+Analyzing hierarchy for module <mem> in library <work>.
+
+Analyzing hierarchy for module <regeister> in library <work>.
+
+Analyzing hierarchy for module <aluCtr> in library <work>.
+
+Analyzing hierarchy for module <Alu> in library <work>.
+
+Analyzing hierarchy for module <pcHandler> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <cpuSingleCycle>.
+Module <cpuSingleCycle> is correct for synthesis.
+ 
+Analyzing module <ctr> in library <work>.
+WARNING:Xst:883 - "ctr.v" line 85: Ignored duplicate item in case statement. 
+Module <ctr> is correct for synthesis.
+ 
+Analyzing module <mem> in library <work>.
+INFO:Xst:1607 - Contents of array <memFile> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:905 - "memory.v" line 32: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <memFile>
+INFO:Xst:1607 - Contents of array <memFile> may be accessed with an index that does not cover the full array size.
+Module <mem> is correct for synthesis.
+ 
+Analyzing module <regeister> in library <work>.
+WARNING:Xst:905 - "reg.v" line 33: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <regFile>
+Module <regeister> is correct for synthesis.
+ 
+Analyzing module <aluCtr> in library <work>.
+Module <aluCtr> is correct for synthesis.
+ 
+Analyzing module <Alu> in library <work>.
+WARNING:Xst:905 - "alu.v" line 29: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <aluRes>
+Module <Alu> is correct for synthesis.
+ 
+Analyzing module <pcHandler> in library <work>.
+WARNING:Xst:905 - "cpuSingleCycle.v" line 30: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <branch>
+Module <pcHandler> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ctr>.
+    Related source file is "ctr.v".
+Unit <ctr> synthesized.
+
+
+Synthesizing Unit <mem>.
+    Related source file is "memory.v".
+WARNING:Xst:647 - Input <address<31:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 64x32-bit single-port RAM <Mram_memFile> for signal <memFile>.
+WARNING:Xst:737 - Found 32-bit latch for signal <readData>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+Unit <mem> synthesized.
+
+
+Synthesizing Unit <regeister>.
+    Related source file is "reg.v".
+    Found 32x32-bit dual-port RAM <Mram_regFile> for signal <regFile>.
+    Found 32x32-bit dual-port RAM <Mram_regFile_ren> for signal <regFile>.
+WARNING:Xst:737 - Found 32-bit latch for signal <readData1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <readData2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 RAM(s).
+Unit <regeister> synthesized.
+
+
+Synthesizing Unit <aluCtr>.
+    Related source file is "aluCtr.v".
+Unit <aluCtr> synthesized.
+
+
+Synthesizing Unit <Alu>.
+    Related source file is "alu.v".
+WARNING:Xst:737 - Found 32-bit latch for signal <aluRes>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit adder for signal <aluRes$addsub0000> created at line 31.
+    Found 32-bit subtractor for signal <mux0000$addsub0000> created at line 33.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <Alu> synthesized.
+
+
+Synthesizing Unit <pcHandler>.
+    Related source file is "cpuSingleCycle.v".
+WARNING:Xst:647 - Input <inst<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 4-to-1 multiplexer for signal <pc>.
+    Found 32-bit adder for signal <pc$addsub0001> created at line 36.
+    Found 33-bit adder carry out for signal <pc$addsub0003> created at line 34.
+    Found 32-bit adder carry out for signal <pc$addsub0004> created at line 34.
+    Found 32-bit shifter logical left for signal <pc$shift0001> created at line 34.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <pcHandler> synthesized.
+
+
+Synthesizing Unit <cpuSingleCycle>.
+    Related source file is "cpuSingleCycle.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <zero_cpu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <aluResult_inst2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <aluResult_inst1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <MEMREAD> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 32-bit register for signal <pc>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <cpuSingleCycle> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 32x32-bit dual-port RAM                               : 2
+ 64x32-bit single-port RAM                             : 2
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 2
+ 32-bit adder carry out                                : 1
+ 32-bit subtractor                                     : 1
+ 33-bit adder carry out                                : 1
+# Registers                                            : 1
+ 32-bit register                                       : 1
+# Latches                                              : 5
+ 32-bit latch                                          : 5
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <memoryData> is unconnected in block <cpuSingleCycle>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <re> is unconnected in block <cpuSingleCycle>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <aluc> is unconnected in block <cpuSingleCycle>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <alu_math> is unconnected in block <cpuSingleCycle>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <ctr> is unconnected in block <cpuSingleCycle>.
+   It will be removed from the design.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <8>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <9>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <10>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <11>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <12>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <13>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <14>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <15>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <16>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <17>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <18>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <19>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <20>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <21>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <22>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <23>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <24>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <25>.
+
+Synthesizing (advanced) Unit <regeister>.
+INFO:Xst - HDL ADVISOR - The RAM <Mram_regFile> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clock_in>      | fall     |
+    |     weA            | connected to signal <regWrite>      | high     |
+    |     addrA          | connected to signal <writeReg>      |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <readReg1>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst - HDL ADVISOR - The RAM <Mram_regFile_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clock_in>      | fall     |
+    |     weA            | connected to signal <regWrite>      | high     |
+    |     addrA          | connected to signal <writeReg>      |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <readReg2>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <regeister> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 32x32-bit dual-port distributed RAM                   : 2
+ 64x32-bit single-port distributed RAM                 : 2
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 2
+ 32-bit adder carry out                                : 1
+ 32-bit subtractor                                     : 1
+ 33-bit adder carry out                                : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Latches                                              : 5
+ 32-bit latch                                          : 5
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1294 - Latch <memoryInstr/readData_0> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_1> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_2> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_3> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_4> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_5> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_6> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_7> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_8> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_9> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_10> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_11> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_12> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_13> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_14> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_15> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_16> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_17> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_18> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_19> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_20> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_21> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_22> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_23> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_24> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_25> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_26> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_27> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_28> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_29> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_30> is equivalent to a wire in block <cpuSingleCycle>.
+WARNING:Xst:1294 - Latch <memoryInstr/readData_31> is equivalent to a wire in block <cpuSingleCycle>.
+
+Optimizing unit <cpuSingleCycle> ...
+
+Optimizing unit <pcHandler> ...
+
+Optimizing unit <Alu> ...
+WARNING:Xst:1293 - FF/Latch <pc_0> has a constant value of 0 in block <cpuSingleCycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc_1> has a constant value of 0 in block <cpuSingleCycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile34> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile32> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile33> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile37> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile35> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile36> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile40> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile38> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile39> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile43> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile41> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile42> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile44> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile45> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile46> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile47> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile50> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile48> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile49> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile53> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile51> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile52> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile56> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile54> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile55> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile59> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile57> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile58> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile62> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile60> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile61> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile63> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryInstr/Mram_memFile64> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren32> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren35> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren33> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren34> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren38> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren36> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren37> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren41> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren39> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren40> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren44> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren42> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren43> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren45> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren46> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren47> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren48> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren51> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren49> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren50> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren54> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren52> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren53> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren57> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren55> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren56> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren60> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren58> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren59> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren63> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren61> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren62> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile_ren64> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile34> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile32> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile33> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile37> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile35> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile36> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile40> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile38> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile39> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile43> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile41> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile42> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile46> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile44> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile45> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile47> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile48> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile49> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile50> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile53> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile51> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile52> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile56> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile54> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile55> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile59> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile57> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile58> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile62> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile60> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile61> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile63> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/Mram_regFile64> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile32> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile35> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile33> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile34> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile38> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile36> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile37> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile41> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile39> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile40> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile44> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile42> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile43> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile47> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile45> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile46> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile48> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile49> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile50> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile51> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile54> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile52> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile53> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile57> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile55> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile56> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile60> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile58> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile59> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile63> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile61> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile62> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/Mram_memFile64> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_0> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData2_31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_0> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <re/readData1_31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_0> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <memoryData/readData_31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_31> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_30> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_29> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_28> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_27> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_26> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_25> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_24> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_23> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_22> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_21> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_20> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_19> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_18> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_17> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_16> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_15> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_14> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_13> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_12> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_11> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_10> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_9> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_8> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_7> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_6> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_5> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_4> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_3> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_2> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_1> of sequential type is unconnected in block <cpuSingleCycle>.
+WARNING:Xst:2677 - Node <alu_math/aluRes_0> of sequential type is unconnected in block <cpuSingleCycle>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpuSingleCycle, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : cpuSingleCycle.ngr
+Top Level Output File Name         : cpuSingleCycle
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 34
+
+Cell Usage :
+# BELS                             : 91
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 29
+#      MUXCY                       : 29
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 30
+#      FD                          : 30
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       16  out of   4656     0%  
+ Number of Slice Flip Flops:             30  out of   9312     0%  
+ Number of 4 input LUTs:                 30  out of   9312     0%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  33  out of    232    14%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 30    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.086ns (Maximum Frequency: 196.618MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.086ns (frequency: 196.618MHz)
+  Total number of paths / destination ports: 465 / 30
+-------------------------------------------------------------------------
+Delay:               5.086ns (Levels of Logic = 30)
+  Source:            pc_3 (FF)
+  Destination:       pc_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pc_3 to pc_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.622  pc_3 (pc_3)
+     LUT1:I0->O            1   0.704   0.000  pch/Madd_pc_addsub0001_cy<3>_rt (pch/Madd_pc_addsub0001_cy<3>_rt)
+     MUXCY:S->O            1   0.464   0.000  pch/Madd_pc_addsub0001_cy<3> (pch/Madd_pc_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<4> (pch/Madd_pc_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<5> (pch/Madd_pc_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<6> (pch/Madd_pc_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<7> (pch/Madd_pc_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<8> (pch/Madd_pc_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<9> (pch/Madd_pc_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<10> (pch/Madd_pc_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<11> (pch/Madd_pc_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<12> (pch/Madd_pc_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<13> (pch/Madd_pc_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<14> (pch/Madd_pc_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<15> (pch/Madd_pc_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<16> (pch/Madd_pc_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<17> (pch/Madd_pc_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<18> (pch/Madd_pc_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<19> (pch/Madd_pc_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<20> (pch/Madd_pc_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<21> (pch/Madd_pc_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<22> (pch/Madd_pc_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<23> (pch/Madd_pc_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<24> (pch/Madd_pc_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<25> (pch/Madd_pc_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<26> (pch/Madd_pc_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<27> (pch/Madd_pc_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<28> (pch/Madd_pc_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  pch/Madd_pc_addsub0001_cy<29> (pch/Madd_pc_addsub0001_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  pch/Madd_pc_addsub0001_cy<30> (pch/Madd_pc_addsub0001_cy<30>)
+     XORCY:CI->O           1   0.804   0.000  pch/Madd_pc_addsub0001_xor<31> (pcoutput<31>)
+     FD:D                      0.308          pc_31
+    ----------------------------------------
+    Total                      5.086ns (4.464ns logic, 0.622ns route)
+                                       (87.8% logic, 12.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            pc_31 (FF)
+  Destination:       pc<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: pc_31 to pc<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.447  pc_31 (pc_31)
+     OBUF:I->O                 3.272          pc_31_OBUF (pc<31>)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.17 secs
+ 
+--> 
+
+Total memory usage is 144640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  467 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

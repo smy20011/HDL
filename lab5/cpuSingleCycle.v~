@@ -1,0 +1,120 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    11:53:20 03/01/2012 
+// Design Name: 
+// Module Name:    cpuSingleCycle 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+module cpuSingleCycle(
+    input clk,
+    input reset
+    );
+    wire REG_DST,
+         JUMP,
+         BRANCH,
+         MEM_READ,
+         MEM_TO_REG,
+         MEM_WRITE,
+         ALU_SRC,
+         REG_WRITE;
+    wire [1:0] ALU_OP;
+    wire [31:0] pc;
+    wire instruction;
+    wire [31:0] readData1;
+    wire [31:0] readData2;
+    wire [31:0] memReadData;
+    wire [31:0] aluResult_inst1;
+    wire [31:0] aluResult_inst2;
+    wire [31:0] aluResult_Math;
+    wire [3:0] aluCtr;
+    wire zero;
+
+    
+    ctr ctr(
+		.opCode(instruction[31:26]),
+		.regDst(REG_DST),
+		.aluSrc(ALU_SRC),
+		.memToReg(MEM_TO_REG),
+		.regWrite(REG_WRITE),
+		.memRead(MEM_READ),
+		.memWrite(MEM_WRITE),
+		.branch(BRANCH),
+		.aluOp(ALU_OP),
+		.jump(JUMP)
+    );
+    //指令取值
+    memory memoryInstr(
+                .clock_in(clk),
+                .address(pc),
+                .writeData(0),
+                .memWrite(0),
+                .memRead(1),
+                .readData(1)
+    );
+    //数据
+    memory memoryData(
+                .clock_in(clk),
+                .address(aluResult_Math),
+                .writeData(readData2),
+                .memWrite(MEM_WRITE),
+                .memRead(MEM_READ),
+                .readData(memReadData)
+    );
+    //寄存器
+    regeister re(
+		.clock_in(clk),
+		.readReg1(instruction[25:21]),
+		.readReg2(instruction[20:16]),
+		.writeReg(REG_DST ? instruction[20:16] : instruction[15-11]),
+		.wiriteData(MEM_TO_REG ? (memReadData) : (aluResult_Math)),
+		.regWrite(REG_WRITE),
+		.readData1(readData1),
+		.readData2(readData2)
+    );
+    //Alu Control
+    aluCtr(
+		.aluOp(ALU_OP),
+		.funct(instruction[5:0]),
+		.aluCtr(ALU_OP)
+    );
+    //算数ALU
+    Alu(
+		.input1(readData1),
+		.input2(ALU_SRC ? (readData2) : (instruction[15:0])),
+		.aluCtr(aluCtr),
+		.zero(zero),
+		.aluRes(aluResult_Math)
+    );
+    //PC + 4
+    Alu(
+		.input1(PC),
+		.input2(4),
+		.aluCtr(4'b0010),
+		.zero(),
+		.aluRes(aluResult_inst1)
+    );
+    //ALU_PC
+    Alu(
+		.input1(aluResult_inst1),
+		.input2(instruction[15:0]),
+		.aluCtr(4'b0010),
+		.zero(),
+		.aluRes(aluResult_inst1)
+    );
+    assign pc = JUMP ? (instruction[25:0] << 2 + aluResult_inst1 & 32'b11110000000000000000000000000000)) :
+                 (BRANCH & zero ? (aluResult_inst2) : (aluResult_inst1));
+endmodule

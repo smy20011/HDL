@@ -1,0 +1,48 @@
+&"This is a Full version of ISim.\n"
+(isim-gdb)
+
+(isim-gdb)
+=elaboration-done,precision="-12"
+(isim-gdb)
+1^done
+(isim-gdb)
+2^done
+(isim-gdb)
+3^done,status="stopped",reason="run-complete",now="0"
+(isim-gdb)
+4^done,status="stopped",reason="run-complete",now="0"
+(isim-gdb)
+5^done,value="HiZ"
+(isim-gdb)
+6^done,result=["27 8",""]
+(isim-gdb)
+7^done,result=["29 0 40 9",""]
+(isim-gdb)
+8^done,result=["31 0 72 41",""]
+(isim-gdb)
+9^done,result=["33 73",""]
+(isim-gdb)
+10^done,result=["35 74",""]
+(isim-gdb)
+11^done,result=["37 0 138 107",""]
+(isim-gdb)
+12^done,result=["41 0 2186 139",""]
+(isim-gdb)
+13^running
+(isim-gdb)
+&"Simulator is doing circuit initialization process.\n"
+(isim-gdb)
+&"Finished circuit initialization process.\n"
+(isim-gdb)
+13*stopped,reason="run-complete",now="1000000"
+(isim-gdb)
+14^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+15^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+16^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+17^done,status="stopped",reason="run-complete",now="1000000"
+(isim-gdb)
+18^exit
+(isim-gdb)
