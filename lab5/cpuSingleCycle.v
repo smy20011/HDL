@@ -19,116 +19,116 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module pcHandler(
-	input [31:0] oldpc,
-	input branch,
-	input jump,
-	input zero,
-	input [31:0] inst,
-	output reg [31:0] pc
+    input [31:0] oldpc,
+    input branch,
+    input jump,
+    input zero,
+    input [31:0] inst,
+    output reg [31:0] pc
 );
-	always @(oldpc or jump or zero or inst)
-	begin
-		if (jump)
-			pc <= inst[25:0];
-		else if (branch && zero)
-			pc <= inst[16:0];
-		else 
-			pc <= oldpc + 1;
-	end
-	initial pc = 0;
+always @(oldpc or jump or zero or branch or inst)
+begin
+    if (jump)
+	pc <= inst[25:0];
+    else if (branch && zero)
+	pc <= inst[15:0];
+    else 
+	pc <= oldpc + 1;
+end
+initial pc = 0;
 endmodule
 
 module cpuSingleCycle(
     input clk,
     input reset
-    );
-	 reg [31:0] pc;
-    wire REG_DST,
-         JUMP,
-         BRANCH_CPU,
-         MEM_READ,
-         MEM_TO_REG,
-         MEM_WRITE,
-         ALU_SRC,
-         REG_WRITE;
-    wire [1:0] ALU_OP;
-    wire [31:0] instruction;
-    wire [31:0] readData1;
-    wire [31:0] readData2;
-    wire [31:0] memReadData;
-    wire [31:0] aluResult_inst1;
-    wire [31:0] aluResult_inst2;
-    wire [31:0] aluResult_Math;
-    wire [3:0] aluCtr;
-    wire zero_cpu;
+);
+reg [31:0] pc;
+wire REG_DST,
+    JUMP,
+    BRANCH_CPU,
+    MEM_READ,
+    MEM_TO_REG,
+    MEM_WRITE,
+    ALU_SRC,
+    REG_WRITE;
+wire [1:0] ALU_OP;
+wire [31:0] instruction;
+wire [31:0] readData1;
+wire [31:0] readData2;
+wire [31:0] memReadData;
+wire [31:0] aluResult_inst1;
+wire [31:0] aluResult_inst2;
+wire [31:0] aluResult_Math;
+wire [3:0] aluCtr;
+wire zero_cpu;
 
-    
-    ctr ctr(
-		.opCode(instruction[31:26]),
-		.regDst(REG_DST),
-		.aluSrc(ALU_SRC),
-		.memToReg(MEM_TO_REG),
-		.regWrite(REG_WRITE),
-		.memRead(MEM_READ),
-		.memWrite(MEM_WRITE),
-		.branch(BRANCH_CPU),
-		.aluOp(ALU_OP),
-		.jump(JUMP)
-    );
-    //指令取值
-    mem memoryInstr(
-                .clock_in(clk),
-                .address(pc),
-                .writeData(0),
-                .memWrite(0),
-                .memRead(1),
-                .readData(instruction)
-    );
-    //数据
-    mem memoryData(
-                .clock_in(clk),
-                .address(aluResult_Math),
-                .writeData(readData2),
-                .memWrite(MEM_WRITE),
-                .memRead(MEM_READ),
-                .readData(memReadData)
-    );
-    //寄存器
-    regeister re(
-		.clock_in(clk),
-		.readReg1(instruction[25:21]),
-		.readReg2(instruction[20:16]),
-		.writeReg(REG_DST ? instruction[15:11]: instruction[20:16]),
-		.writeData(MEM_TO_REG ? (memReadData) : (aluResult_Math)),
-		.regWrite(REG_WRITE),
-		.readData1(readData1),
-		.readData2(readData2)
-    );
-    //Alu Control
-    aluCtr aluc(
-		.aluOp(ALU_OP),
-		.funct(instruction[5:0]),
-		.aluCtr(aluCtr)
-    );
-    //算数ALU
-    Alu alu_math(
-		.input1(readData1),
-		.input2(ALU_SRC ? (instruction[15:0]) : (readData2)),
-		.aluCtr(aluCtr),
-		.zero(zero_cpu),
-		.aluRes(aluResult_Math)
-    );
-	wire [31:0] pcoutput;
-	pcHandler pch(
-		.oldpc(pc),
-		.branch(BRANCH_CPU),
-		.jump(JUMP),
-		.zero(zero_cpu),
-		.inst(instruction),
-		.pc(pcoutput)
-	);
+
+ctr ctr(
+    .opCode(instruction[31:26]),
+    .regDst(REG_DST),
+    .aluSrc(ALU_SRC),
+    .memToReg(MEM_TO_REG),
+    .regWrite(REG_WRITE),
+    .memRead(MEM_READ),
+    .memWrite(MEM_WRITE),
+    .branch(BRANCH_CPU),
+    .aluOp(ALU_OP),
+    .jump(JUMP)
+);
+//指令取值
+mem memoryInstr(
+    .clock_in(clk),
+    .address(pc),
+    .writeData(0),
+    .memWrite(0),
+    .memRead(1),
+    .readData(instruction)
+);
+//数据
+mem memoryData(
+    .clock_in(clk),
+    .address(aluResult_Math),
+    .writeData(readData2),
+    .memWrite(MEM_WRITE),
+    .memRead(MEM_READ),
+    .readData(memReadData)
+);
+//寄存器
+regeister re(
+    .clock_in(clk),
+    .readReg1(instruction[25:21]),
+    .readReg2(instruction[20:16]),
+    .writeReg(REG_DST ? instruction[15:11]: instruction[20:16]),
+    .writeData(MEM_TO_REG ? (memReadData) : (aluResult_Math)),
+    .regWrite(REG_WRITE),
+    .readData1(readData1),
+    .readData2(readData2)
+);
+//Alu Control
+aluCtr aluc(
+    .aluOp(ALU_OP),
+    .funct(instruction[5:0]),
+    .aluCtr(aluCtr)
+);
+//算数ALU
+Alu alu_math(
+    .input1(readData1),
+    .input2(ALU_SRC ? (instruction[15:0]) : (readData2)),
+    .aluCtr(aluCtr),
+    .zero(zero_cpu),
+    .aluRes(aluResult_Math)
+);
+wire [31:0] pcoutput;
+pcHandler pch(
+    .oldpc(pc),
+    .branch(BRANCH_CPU),
+    .jump(JUMP),
+    .zero(zero_cpu),
+    .inst(instruction),
+    .pc(pcoutput)
+);
 initial begin 
-	pc = 0;
+    pc = 0;
 end
 always @(negedge clk) pc <= pcoutput;
 

@@ -1,6 +1,25 @@
 ISim log file
-Running: C:\Documents and Settings\lab5\test_isim_beh.exe -gui -tclbatch isim.cmd -wdb C:/Documents and Settings/lab5/test_isim_beh.wdb 
-This is a Full version of ISim.
+Running: D:\proj\HDL\lab5\lab5\test_isim_beh.exe -gui -tclbatch isim.cmd -wdb D:/proj/HDL/lab5/lab5/test_isim_beh.wdb 
+----------------------------------------------------------------------
+WARNING: Invalid host.
+ The hostid of this system does not match the hostid
+ specified in the license file.
+Feature:       ISIM
+Hostid:        001485346eab
+License path:  C:/.Xilinx\XilinxISE11.1_license.lic;C:/.Xilinx\Xilinx_ISE11.1_license2.lic;F:\Xilinx\11.1\ISE/data\*.lic;F:\Xilinx\11.1\EDK/data/core_licenses\apu_fpu_v2_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\apu_fpu_virtex5_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_atmc_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_atmc_v2_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_can_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernetlite_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernetlite_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_j_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_k_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_l_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_m_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_01_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_hdlc_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_hdlc_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_hdlc_v2_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_hdlc_v2_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_iic_v1_01_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_iic_v1_01_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_iic_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_pci_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_pci_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_pci_v1_00_c_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_pci_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_uart16550_v1_00_c_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_uart16550_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_usb2_device_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plbv46_pcie_v3_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plbv46_pci_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_atmc_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_ethernet_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_ethernet_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_gemac_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_gemac_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_gemac_v1_01_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_gemac_v2_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_pci_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_rapidio_lvds_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_rapidio_lvds_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_temac_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_uart16550_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_uart16550_v1_00_c_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\soft_temac_wrap_v1_flexlm.lic;[...]
+FLEXnet Licensing error:-9,57
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+WARNING: INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
 WARNING:  For instance uut/memoryInstr/, width 1 of formal port memWrite is not equal to width 32 of actual constant.
 WARNING:  For instance uut/memoryInstr/, width 1 of formal port memRead is not equal to width 32 of actual constant.
 Time resolution is 1 ps

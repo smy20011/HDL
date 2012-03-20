@@ -20,7 +20,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Documents and Settings/lab5/cpuSingleCycle.v";
+static const char *ng0 = "D:/proj/HDL/lab5/lab5/cpuSingleCycle.v";
 static int ng1[] = {1, 0};
 static int ng2[] = {0, 0};
 
@@ -286,9 +286,9 @@ LAB23:    xsi_set_current_line(34, ng0);
     t69 = (t68 >> 0);
     *((unsigned int *)t63) = t69;
     t70 = *((unsigned int *)t62);
-    *((unsigned int *)t62) = (t70 & 131071U);
+    *((unsigned int *)t62) = (t70 & 65535U);
     t71 = *((unsigned int *)t63);
-    *((unsigned int *)t63) = (t71 & 131071U);
+    *((unsigned int *)t63) = (t71 & 65535U);
     t72 = (t0 + 1196);
     xsi_vlogvar_generic_wait_assign_value(t72, t62, 2, 0, 0, 32, 0LL);
     goto LAB25;

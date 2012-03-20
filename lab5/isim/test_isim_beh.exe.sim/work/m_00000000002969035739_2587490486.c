@@ -20,7 +20,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Documents and Settings/lab5/alu.v";
+static const char *ng0 = "D:/proj/HDL/lab5/lab5/alu.v";
 static unsigned int ng1[] = {2U, 0U};
 static unsigned int ng2[] = {6U, 0U};
 static unsigned int ng3[] = {0U, 0U};
@@ -349,7 +349,7 @@ LAB55:    t22 = (t6 + 4);
 LAB57:    xsi_set_current_line(43, ng0);
     t2 = ((char*)((ng6)));
     t3 = (t0 + 1012);
-    xsi_vlogvar_generic_wait_assign_value(t3, t2, 1, 0, 0, 1, 0LL);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
 
 LAB58:    goto LAB2;
 
@@ -365,7 +365,7 @@ LAB10:    xsi_set_current_line(31, ng0);
     memset(t31, 0, 8);
     xsi_vlog_unsigned_add(t31, 32, t29, 32, t30, 32);
     t28 = (t0 + 1104);
-    xsi_vlogvar_generic_wait_assign_value(t28, t31, 2, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t28, t31, 0, 0, 32);
     goto LAB12;
 
 LAB15:    *((unsigned int *)t6) = 1;
@@ -380,7 +380,7 @@ LAB17:    xsi_set_current_line(33, ng0);
     memset(t31, 0, 8);
     xsi_vlog_unsigned_minus(t31, 32, t22, 32, t28, 32);
     t9 = (t0 + 1104);
-    xsi_vlogvar_generic_wait_assign_value(t9, t31, 2, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t9, t31, 0, 0, 32);
     goto LAB19;
 
 LAB22:    *((unsigned int *)t6) = 1;
@@ -410,7 +410,7 @@ LAB24:    xsi_set_current_line(35, ng0);
 
 LAB28:
 LAB29:    t60 = (t0 + 1104);
-    xsi_vlogvar_generic_wait_assign_value(t60, t31, 2, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t60, t31, 0, 0, 32);
     goto LAB26;
 
 LAB27:    t40 = *((unsigned int *)t31);
@@ -467,7 +467,7 @@ LAB34:    xsi_set_current_line(37, ng0);
 
 LAB38:
 LAB39:    t60 = (t0 + 1104);
-    xsi_vlogvar_generic_wait_assign_value(t60, t31, 2, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t60, t31, 0, 0, 32);
     goto LAB36;
 
 LAB37:    t40 = *((unsigned int *)t31);
@@ -532,7 +532,7 @@ LAB50:    t65 = *((unsigned int *)t31);
     t66 = *((unsigned int *)t60);
     *((unsigned int *)t60) = (t66 & 4294967295U);
     t67 = (t0 + 1104);
-    xsi_vlogvar_generic_wait_assign_value(t67, t31, 2, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t67, t31, 0, 0, 32);
     goto LAB46;
 
 LAB47:    t40 = *((unsigned int *)t61);
@@ -571,7 +571,7 @@ LAB54:    *((unsigned int *)t6) = 1;
 LAB56:    xsi_set_current_line(41, ng0);
     t28 = ((char*)((ng7)));
     t29 = (t0 + 1012);
-    xsi_vlogvar_generic_wait_assign_value(t29, t28, 1, 0, 0, 1, 0LL);
+    xsi_vlogvar_assign_value(t29, t28, 0, 0, 1);
     goto LAB58;
 
 }

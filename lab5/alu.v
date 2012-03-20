@@ -28,19 +28,19 @@ module Alu(
 	 always @ (input1 or input2 or aluCtr)
 	 begin
 		if (aluCtr == 4'b0010)
-			aluRes <= input1 + input2;
+			aluRes = input1 + input2;
 		if (aluCtr == 4'b0110)
-			aluRes <= input1 - input2;
+			aluRes = input1 - input2;
 		if (aluCtr == 4'b0000)
-			aluRes <= input1 & input2;
+			aluRes = input1 & input2;
 		if (aluCtr == 4'b0001)
-			aluRes <= input1 | input2;
+			aluRes = input1 | input2;
 		if (aluCtr == 4'b1100)
-			aluRes <= ~(input1 | input2);
+			aluRes = ~(input1 | input2);
 		if (aluRes == 0)
-			zero <= 1;
+			zero = 1;
 		else
-			zero <= 0;
+			zero = 0;
 	 end
 
 endmodule

@@ -73,18 +73,6 @@ module ctr(
 			6'b000100:
 				begin
 					regDst =   0;
-					aluSrc =   1;
-					memToReg = 1;
-					regWrite = 1;
-					memRead =  1;
-					memWrite = 0;
-					branch =   0;
-					aluOp = 2'b00;
-					jump =     0;
-				end		
-			6'b000100:
-				begin
-					regDst =   0;
 					aluSrc =   0;
 					memToReg = 0;
 					regWrite = 0;

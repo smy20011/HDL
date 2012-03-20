@@ -20,23 +20,29 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Documents and Settings/lab5/memory.v";
+static const char *ng0 = "D:/proj/HDL/lab5/lab5/memory.v";
 static int ng1[] = {1, 0};
-static unsigned int ng2[] = {2363686914U, 0U};
+static unsigned int ng2[] = {2348941319U, 0U};
 static int ng3[] = {0, 0};
-static unsigned int ng4[] = {2365849602U, 0U};
-static unsigned int ng5[] = {8595490U, 0U};
+static unsigned int ng4[] = {2349006856U, 0U};
+static unsigned int ng5[] = {2349072393U, 0U};
 static int ng6[] = {2, 0};
-static unsigned int ng7[] = {279248902U, 0U};
+static unsigned int ng7[] = {2349137930U, 0U};
 static int ng8[] = {3, 0};
-static unsigned int ng9[] = {4392992U, 0U};
+static unsigned int ng9[] = {4403232U, 0U};
 static int ng10[] = {4, 0};
-static unsigned int ng11[] = {134217730U, 0U};
+static unsigned int ng11[] = {8730656U, 0U};
 static int ng12[] = {5, 0};
-static unsigned int ng13[] = {100U, 0U};
+static unsigned int ng13[] = {281477120U, 0U};
 static int ng14[] = {6, 0};
-static unsigned int ng15[] = {200U, 0U};
+static unsigned int ng15[] = {100U, 0U};
 static int ng16[] = {7, 0};
+static unsigned int ng17[] = {200U, 0U};
+static int ng18[] = {8, 0};
+static unsigned int ng19[] = {50U, 0U};
+static int ng20[] = {9, 0};
+static unsigned int ng21[] = {250U, 0U};
+static int ng22[] = {10, 0};
 
 
 
@@ -504,7 +510,70 @@ LAB16:    xsi_set_current_line(50, ng0);
     if (t18 == 1)
         goto LAB17;
 
-LAB18:
+LAB18:    xsi_set_current_line(51, ng0);
+    t1 = ((char*)((ng17)));
+    t2 = (t0 + 1288);
+    t5 = (t0 + 1288);
+    t6 = (t5 + 44U);
+    t7 = *((char **)t6);
+    t8 = (t0 + 1288);
+    t9 = (t8 + 40U);
+    t10 = *((char **)t9);
+    t11 = ((char*)((ng18)));
+    xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
+    t12 = (t3 + 4);
+    t13 = *((unsigned int *)t12);
+    t14 = (!(t13));
+    t15 = (t4 + 4);
+    t16 = *((unsigned int *)t15);
+    t17 = (!(t16));
+    t18 = (t14 && t17);
+    if (t18 == 1)
+        goto LAB19;
+
+LAB20:    xsi_set_current_line(52, ng0);
+    t1 = ((char*)((ng19)));
+    t2 = (t0 + 1288);
+    t5 = (t0 + 1288);
+    t6 = (t5 + 44U);
+    t7 = *((char **)t6);
+    t8 = (t0 + 1288);
+    t9 = (t8 + 40U);
+    t10 = *((char **)t9);
+    t11 = ((char*)((ng20)));
+    xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
+    t12 = (t3 + 4);
+    t13 = *((unsigned int *)t12);
+    t14 = (!(t13));
+    t15 = (t4 + 4);
+    t16 = *((unsigned int *)t15);
+    t17 = (!(t16));
+    t18 = (t14 && t17);
+    if (t18 == 1)
+        goto LAB21;
+
+LAB22:    xsi_set_current_line(53, ng0);
+    t1 = ((char*)((ng21)));
+    t2 = (t0 + 1288);
+    t5 = (t0 + 1288);
+    t6 = (t5 + 44U);
+    t7 = *((char **)t6);
+    t8 = (t0 + 1288);
+    t9 = (t8 + 40U);
+    t10 = *((char **)t9);
+    t11 = ((char*)((ng22)));
+    xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
+    t12 = (t3 + 4);
+    t13 = *((unsigned int *)t12);
+    t14 = (!(t13));
+    t15 = (t4 + 4);
+    t16 = *((unsigned int *)t15);
+    t17 = (!(t16));
+    t18 = (t14 && t17);
+    if (t18 == 1)
+        goto LAB23;
+
+LAB24:
 LAB1:    return;
 LAB3:    t19 = *((unsigned int *)t3);
     t20 = *((unsigned int *)t4);
@@ -561,6 +630,27 @@ LAB17:    t19 = *((unsigned int *)t3);
     t22 = (t21 + 1);
     xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
     goto LAB18;
+
+LAB19:    t19 = *((unsigned int *)t3);
+    t20 = *((unsigned int *)t4);
+    t21 = (t19 - t20);
+    t22 = (t21 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
+    goto LAB20;
+
+LAB21:    t19 = *((unsigned int *)t3);
+    t20 = *((unsigned int *)t4);
+    t21 = (t19 - t20);
+    t22 = (t21 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
+    goto LAB22;
+
+LAB23:    t19 = *((unsigned int *)t3);
+    t20 = *((unsigned int *)t4);
+    t21 = (t19 - t20);
+    t22 = (t21 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
+    goto LAB24;
 
 }
 

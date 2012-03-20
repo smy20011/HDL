@@ -20,7 +20,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Documents and Settings/lab5/test.v";
+static const char *ng0 = "D:/proj/HDL/lab5/lab5/test.v";
 static int ng1[] = {0, 0};
 
 
