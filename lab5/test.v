@@ -49,6 +49,6 @@ module test;
 		// Add stimulus here
 
 	end
-	always #10ps fast_clk = ~fast_clk;
+	always #1 fast_clk = ~fast_clk;
 endmodule
 

@@ -27,9 +27,12 @@ module regeister(
     input regWrite,
     input clr,
     output reg [31:0] readData1,
-    output reg [31:0] readData2
+    output reg [31:0] readData2,
+    input [31:0] outsideAddress,
+    output [31:0] outsideReadData
 );
 reg [31:0] regFile[31:0];
+assign outsideReadData = regFile[outsideAddress];
 integer i;
 always @(readReg1 or readReg2 or regWrite)
 begin
@@ -44,5 +47,4 @@ begin
         for (i = 0 ; i != 32 ; i = i + 1)
             regFile[i] <= 0;
     end
-
     endmodule

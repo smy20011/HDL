@@ -8,8 +8,11 @@ Analyzing Verilog file "D:/lab5/lab5/lab5/ctr.v" into library work
 Analyzing Verilog file "D:/lab5/lab5/lab5/aluCtr.v" into library work
 Analyzing Verilog file "D:/lab5/lab5/lab5/alu.v" into library work
 Analyzing Verilog file "D:/lab5/lab5/lab5/cpuSingleCycle.v" into library work
-Analyzing Verilog file "D:/lab5/lab5/lab5/test.v" into library work
-ERROR:HDLCompiler:806 - "D:/lab5/lab5/lab5/test.v" Line 52: Syntax error near fast_clk.
-ERROR:HDLCompiler:60 - "D:/lab5/lab5/lab5/test.v" Line 52: fast_clk is not a type
-ERROR:HDLCompiler:598 - "D:/lab5/lab5/lab5/test.v" Line 25: Module <test> ignored due to previous errors.
-Verilog file D:/lab5/lab5/lab5/test.v ignored due to errors
+ERROR:HDLCompiler:731 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 33: Procedural assignment to a non-register <pc> is not permitted.
+ERROR:HDLCompiler:731 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 35: Procedural assignment to a non-register <pc> is not permitted.
+ERROR:HDLCompiler:731 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 37: Procedural assignment to a non-register <pc> is not permitted.
+ERROR:HDLCompiler:731 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 39: Procedural assignment to a non-register <pc> is not permitted.
+ERROR:HDLCompiler:598 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 21: Module <pcHandler> ignored due to previous errors.
+ERROR:HDLCompiler:598 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 42: Module <diver> ignored due to previous errors.
+ERROR:HDLCompiler:598 - "D:/lab5/lab5/lab5/cpuSingleCycle.v" Line 52: Module <cpuSingleCycle> ignored due to previous errors.
+Verilog file D:/lab5/lab5/lab5/cpuSingleCycle.v ignored due to errors

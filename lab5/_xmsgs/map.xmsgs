@@ -27,11 +27,11 @@ To see the details of these <arg fmt="%s" index="5">warning</arg> messages, plea
 </msg>
 
 <msg type="warning" file="LIT" num="175" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;ctr/physical_group_aluOp&lt;0&gt;/aluOp&lt;0&gt;_BUFG&quot; (output signal=ALU_OP&lt;0&gt;)</arg> has a mix of clock and non-clock loads. Some of the non-clock loads are (maximum of 5 listed):
-<arg fmt="%s" index="2">Pin I0 of alu_math/_old_aluRes_4_9__and00011
-Pin I1 of alu_math/_old_aluRes_4_9__and00001
-Pin I0 of alu_math/_old_aluRes_4_8__and00011
-Pin I1 of alu_math/_old_aluRes_4_8__and00001
-Pin I0 of alu_math/_old_aluRes_4_7__and00011</arg>
+<arg fmt="%s" index="2">Pin I0 of alu_math/_old_aluRes_5_9__and00011
+Pin I1 of alu_math/_old_aluRes_5_9__and00001
+Pin I0 of alu_math/_old_aluRes_5_8__and00011
+Pin I1 of alu_math/_old_aluRes_5_8__and00001
+Pin I0 of alu_math/_old_aluRes_5_7__and00011</arg>
 </msg>
 
 <msg type="warning" file="LIT" num="175" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;ctr/physical_group_memToReg/memRead_BUFG&quot; (output signal=ALU_SRC)</arg> has a mix of clock and non-clock loads. Some of the non-clock loads are (maximum of 5 listed):

@@ -1,7 +1,7 @@
 Release 11.1 par L.33 (nt)
 Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
 
-zcsy-42::  Wed Mar 21 14:58:48 2012
+zcsy-42::  Wed Mar 21 15:29:29 2012
 
 par -ise lab5.ise -w -intstyle ise -ol std -t 1 cpuSingleCycle_map.ncd
 cpuSingleCycle.ncd cpuSingleCycle.pcf 
@@ -25,7 +25,7 @@ Design Summary Report:
    Number of External Input IOBs                  2
 
       Number of External Input IBUFs              2
-        Number of LOCed External Input IBUFs      1 out of 2      50%
+        Number of LOCed External Input IBUFs      2 out of 2     100%
 
 
    Number of External Output IOBs                32
@@ -59,7 +59,7 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d5c66721) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:d8a58e79) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:837 - Partially locked IO Bus is found. 
@@ -131,40 +131,40 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
 
 INFO:Place:834 - Only a subset of IOs are locked. Out of 32 IOs, 4 are locked and 28 are not locked. If you would like
    to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:d5c66721) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:d8a58e79) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:c5cedd15) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:c8ae046d) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 ....
-Phase 4.2  Initial Clock and IO Placement (Checksum:84b2313c) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:87915894) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:84b2313c) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:87915894) REAL time: 2 secs 
 
 Phase 6.3  Local Placement Optimization
 ....
-Phase 6.3  Local Placement Optimization (Checksum:bfafac56) REAL time: 2 secs 
+Phase 6.3  Local Placement Optimization (Checksum:a2a8b62e) REAL time: 2 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:3b3b2a8d) REAL time: 2 secs 
+Phase 7.5  Local Placement Optimization (Checksum:b8d2311d) REAL time: 2 secs 
 
 Phase 8.8  Global Placement
 .................................
-..........................................................................
+.....................................................................
 ..........
 ......
-Phase 8.8  Global Placement (Checksum:e82e5aaf) REAL time: 5 secs 
+Phase 8.8  Global Placement (Checksum:e63c0712) REAL time: 5 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:e82e5aaf) REAL time: 5 secs 
+Phase 9.5  Local Placement Optimization (Checksum:e63c0712) REAL time: 5 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:c231a242) REAL time: 5 secs 
+Phase 10.18  Placement Optimization (Checksum:a87ca790) REAL time: 5 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:c231a242) REAL time: 5 secs 
+Phase 11.5  Local Placement Optimization (Checksum:a87ca790) REAL time: 5 secs 
 
 Total REAL time to Placer completion: 5 secs 
 Total CPU  time to Placer completion: 4 secs 
@@ -179,9 +179,9 @@ Phase  1  : 5006 unrouted;      REAL time: 7 secs
 
 Phase  2  : 4163 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 778 unrouted;      REAL time: 7 secs 
+Phase  3  : 788 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 778 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 788 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
@@ -216,15 +216,15 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|             ALU_SRC | BUFGMUX_X2Y11| No   |   74 |  0.041     |  0.160      |
+|             ALU_SRC | BUFGMUX_X2Y11| No   |   74 |  0.037     |  0.156      |
 +---------------------+--------------+------+------+------------+-------------+
-|           ALU_OP<0> |  BUFGMUX_X2Y1| No   |  128 |  0.026     |  0.164      |
+|           ALU_OP<0> |  BUFGMUX_X2Y1| No   |  128 |  0.024     |  0.172      |
 +---------------------+--------------+------+------+------------+-------------+
-|      fast_clk_BUFGP | BUFGMUX_X1Y11| No   |   13 |  0.012     |  0.160      |
+|      fast_clk_BUFGP | BUFGMUX_X1Y11| No   |   13 |  0.004     |  0.154      |
 +---------------------+--------------+------+------+------------+-------------+
-|                 clk |  BUFGMUX_X1Y0| No   |  293 |  0.068     |  0.186      |
+|                 clk |  BUFGMUX_X1Y0| No   |  293 |  0.066     |  0.186      |
 +---------------------+--------------+------+------+------------+-------------+
-|    icon_control0<0> | BUFGMUX_X1Y10| No   |  102 |  0.076     |  0.197      |
+|    icon_control0<0> | BUFGMUX_X1Y10| No   |  102 |  0.083     |  0.203      |
 +---------------------+--------------+------+------+------------+-------------+
 |U_icon_pro/U0/iUPDAT |              |      |      |            |             |
 |               E_OUT |         Local|      |    1 |  0.000     |  1.862      |
@@ -244,18 +244,18 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    10.517ns|     4.483ns|       0|           0
+  TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    11.510ns|     3.490ns|       0|           0
    TO TIMEGRP "J_CLK" 15 ns                 |             |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.327ns|     1.673ns|       0|           0
+  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.004ns|     1.996ns|       0|           0
    TO TIMEGRP "U_CLK" 15 ns                 |             |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns H | SETUP       |    17.620ns|    12.380ns|       0|           0
-  IGH 50%                                   | HOLD        |     0.699ns|            |       0|           0
+  TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns H | SETUP       |    16.681ns|    13.319ns|       0|           0
+  IGH 50%                                   | HOLD        |     0.725ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  PATH "TS_J_TO_D_path" TIG                 | SETUP       |         N/A|     6.753ns|     N/A|           0
+  PATH "TS_J_TO_D_path" TIG                 | SETUP       |         N/A|     6.514ns|     N/A|           0
 ------------------------------------------------------------------------------------------------------
-  PATH "TS_D_TO_J_path" TIG                 | SETUP       |         N/A|     7.160ns|     N/A|           0
+  PATH "TS_D_TO_J_path" TIG                 | SETUP       |         N/A|     7.776ns|     N/A|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -269,7 +269,7 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 9 secs 
-Total CPU time to PAR completion: 9 secs 
+Total CPU time to PAR completion: 8 secs 
 
 Peak Memory Usage:  178 MB
 

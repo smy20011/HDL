@@ -10,7 +10,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.51 $
-Mapped Date    : Wed Mar 21 14:58:44 2012
+Mapped Date    : Wed Mar 21 15:29:25 2012
 
 WARNING:LIT:243 - Logical network ALU_OP<1> has no load.
 WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 5
@@ -29,11 +29,11 @@ WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
    symbol "ctr/physical_group_aluOp<0>/aluOp<0>_BUFG" (output signal=ALU_OP<0>)
    has a mix of clock and non-clock loads. Some of the non-clock loads are
    (maximum of 5 listed):
-   Pin I0 of alu_math/_old_aluRes_4_9__and00011
-   Pin I1 of alu_math/_old_aluRes_4_9__and00001
-   Pin I0 of alu_math/_old_aluRes_4_8__and00011
-   Pin I1 of alu_math/_old_aluRes_4_8__and00001
-   Pin I0 of alu_math/_old_aluRes_4_7__and00011
+   Pin I0 of alu_math/_old_aluRes_5_9__and00011
+   Pin I1 of alu_math/_old_aluRes_5_9__and00001
+   Pin I0 of alu_math/_old_aluRes_5_8__and00011
+   Pin I1 of alu_math/_old_aluRes_5_8__and00001
+   Pin I0 of alu_math/_old_aluRes_5_7__and00011
 WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
    symbol "ctr/physical_group_memToReg/memRead_BUFG" (output signal=ALU_SRC) has
    a mix of clock and non-clock loads. Some of the non-clock loads are (maximum

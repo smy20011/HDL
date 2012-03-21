@@ -10,7 +10,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.51 $
-Mapped Date    : Wed Mar 21 14:58:44 2012
+Mapped Date    : Wed Mar 21 15:29:25 2012
 
 Design Summary
 --------------
@@ -102,11 +102,11 @@ WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
    symbol "ctr/physical_group_aluOp<0>/aluOp<0>_BUFG" (output signal=ALU_OP<0>)
    has a mix of clock and non-clock loads. Some of the non-clock loads are
    (maximum of 5 listed):
-   Pin I0 of alu_math/_old_aluRes_4_9__and00011
-   Pin I1 of alu_math/_old_aluRes_4_9__and00001
-   Pin I0 of alu_math/_old_aluRes_4_8__and00011
-   Pin I1 of alu_math/_old_aluRes_4_8__and00001
-   Pin I0 of alu_math/_old_aluRes_4_7__and00011
+   Pin I0 of alu_math/_old_aluRes_5_9__and00011
+   Pin I1 of alu_math/_old_aluRes_5_9__and00001
+   Pin I0 of alu_math/_old_aluRes_5_8__and00011
+   Pin I1 of alu_math/_old_aluRes_5_8__and00001
+   Pin I0 of alu_math/_old_aluRes_5_7__and00011
 WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
    symbol "ctr/physical_group_memToReg/memRead_BUFG" (output signal=ALU_SRC) has
    a mix of clock and non-clock loads. Some of the non-clock loads are (maximum
@@ -176,7 +176,7 @@ removed.
 Loadless block "U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
 Loadless block "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B"
 (ROM) removed.
-The signal "re/mux10_3_f7" is sourceless and has been removed.
+The signal "re/Mmux_readData1_3_f7" is sourceless and has been removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -230,7 +230,7 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| clr                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| clr                                | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
 | fast_clk                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | out_pc<0>                          | IOB              | OUTPUT    | LVTTL                |       | 8        | SLOW |              |          | 0 / 0    |
 | out_pc<1>                          | IOB              | OUTPUT    | LVTTL                |       | 8        | SLOW |              |          | 0 / 0    |

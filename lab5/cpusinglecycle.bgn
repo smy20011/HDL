@@ -6,7 +6,7 @@ C:\Xilinx\11.1\ISE.
 speed -4
 Opened constraints file cpuSingleCycle.pcf.
 
-Wed Mar 21 14:59:04 2012
+Wed Mar 21 15:29:43 2012
 
 C:\Xilinx\11.1\ISE\bin\nt\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:No -g DriveDone:No cpuSingleCycle.ncd 
 

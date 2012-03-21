@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map L.33 on Wed Mar 21 14:58:46 2012
+// Written by: Map L.33 on Wed Mar 21 15:29:27 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -8,6 +8,7 @@ COMP "out_pc<0>" LOCATE = SITE "F12" LEVEL 1;
 COMP "out_pc<1>" LOCATE = SITE "E12" LEVEL 1;
 COMP "out_pc<2>" LOCATE = SITE "E11" LEVEL 1;
 COMP "out_pc<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "clr" LOCATE = SITE "L13" LEVEL 1;
 NET "fast_clk_BUFGP/IBUFG" BEL "fast_clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 PIN
         U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.B_pins<10>

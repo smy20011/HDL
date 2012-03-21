@@ -1,7 +1,0 @@
-verilog isim_temp "C:/Documents and Settings/lab5/reg.v"
-verilog isim_temp "C:/Documents and Settings/lab5/memory.v"
-verilog isim_temp "C:/Documents and Settings/lab5/ctr.v"
-verilog isim_temp "C:/Documents and Settings/lab5/aluCtr.v"
-verilog isim_temp "C:/Documents and Settings/lab5/alu.v"
-verilog isim_temp "C:/Documents and Settings/lab5/cpuSingleCycle.v"
-verilog isim_temp "C:/Xilinx/11.1/ISE/verilog/src/glbl.v"
