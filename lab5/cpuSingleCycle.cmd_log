@@ -102,3 +102,58 @@ netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl
 xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
 xst -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -ifn "C:/Documents and Settings/lab5/cpuSingleCycle.xst" -ofn "C:/Documents and Settings/lab5/cpuSingleCycle.syr" 
 netgen -ise "C:/Documents and Settings/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc cpuSingleCycle.ngd  
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc cpuSingleCycle.ngd  
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc cpuSingleCycle.ngd  
+map -ise "lab5.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o cpuSingleCycle_map.ncd cpuSingleCycle.ngd cpuSingleCycle.pcf 
+par -ise "lab5.ise" -w -intstyle ise -ol std -t 1 cpuSingleCycle_map.ncd cpuSingleCycle.ncd cpuSingleCycle.pcf 
+trce -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml cpuSingleCycle.twx cpuSingleCycle.ncd -o cpuSingleCycle.twr cpuSingleCycle.pcf -ucf cpuSingleCycle.ucf 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc cpuSingleCycle.ngd  
+map -ise "lab5.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o cpuSingleCycle_map.ncd cpuSingleCycle.ngd cpuSingleCycle.pcf 
+par -ise "lab5.ise" -w -intstyle ise -ol std -t 1 cpuSingleCycle_map.ncd cpuSingleCycle.ncd cpuSingleCycle.pcf 
+trce -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml cpuSingleCycle.twx cpuSingleCycle.ncd -o cpuSingleCycle.twr cpuSingleCycle.pcf -ucf cpuSingleCycle.ucf 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle_cs.ngc cpuSingleCycle.ngd  
+map -ise "lab5.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o cpuSingleCycle_map.ncd cpuSingleCycle.ngd cpuSingleCycle.pcf 
+par -ise "lab5.ise" -w -intstyle ise -ol std -t 1 cpuSingleCycle_map.ncd cpuSingleCycle.ncd cpuSingleCycle.pcf 
+trce -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml cpuSingleCycle.twx cpuSingleCycle.ncd -o cpuSingleCycle.twr cpuSingleCycle.pcf -ucf cpuSingleCycle.ucf 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle_cs.ngc cpuSingleCycle.ngd  
+map -ise "lab5.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o cpuSingleCycle_map.ncd cpuSingleCycle.ngd cpuSingleCycle.pcf 
+par -ise "lab5.ise" -w -intstyle ise -ol std -t 1 cpuSingleCycle_map.ncd cpuSingleCycle.ncd cpuSingleCycle.pcf 
+trce -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml cpuSingleCycle.twx cpuSingleCycle.ncd -o cpuSingleCycle.twr cpuSingleCycle.pcf -ucf cpuSingleCycle.ucf 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+netgen -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+netgen -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+xst -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -ifn "D:/lab5/lab5/lab5/cpuSingleCycle.xst" -ofn "D:/lab5/lab5/lab5/cpuSingleCycle.syr" 
+netgen -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim cpuSingleCycle.ngc cpuSingleCycle_synthesis.v 
+ngdbuild -ise "lab5.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle_cs.ngc cpuSingleCycle.ngd  
+map -ise "lab5.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o cpuSingleCycle_map.ncd cpuSingleCycle.ngd cpuSingleCycle.pcf 
+par -ise "lab5.ise" -w -intstyle ise -ol std -t 1 cpuSingleCycle_map.ncd cpuSingleCycle.ncd cpuSingleCycle.pcf 
+trce -ise "D:/lab5/lab5/lab5/lab5.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml cpuSingleCycle.twx cpuSingleCycle.ncd -o cpuSingleCycle.twr cpuSingleCycle.pcf -ucf cpuSingleCycle.ucf 
+bitgen -ise "lab5.ise" -intstyle ise -f cpuSingleCycle.ut cpuSingleCycle.ncd 

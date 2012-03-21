@@ -5,7 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="578" delta="unknown" >Design contains no instances.
+<msg type="warning" file="NgdBuild" num="452" delta="unknown" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ALU_OP&lt;1&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="unknown" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MEM_WRITE</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="unknown" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">aluCtr&lt;0&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="unknown" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">aluCtr&lt;1&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="unknown" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">aluCtr&lt;3&gt;</arg>&apos; has no driver
 </msg>
 
 </messages>

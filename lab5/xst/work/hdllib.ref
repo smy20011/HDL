@@ -1,9 +1,10 @@
-MO pcHandler NULL cpuSingleCycle.v vlg4D/pc_handler.bin 1331190838
-MO mem NULL memory.v vlg0B/mem.bin 1331190838
-MO aluCtr NULL aluCtr.v vlg23/alu_ctr.bin 1331190838
-MO ctr NULL ctr.v vlg61/ctr.bin 1331190838
-MO cpuSingleCycle NULL cpuSingleCycle.v vlg0A/cpu_single_cycle.bin 1331190838
+MO pcHandler NULL cpuSingleCycle.v vlg4D/pc_handler.bin 1332313088
+MO mem NULL memory.v vlg0B/mem.bin 1332313088
+MO diver NULL cpuSingleCycle.v vlg5A/diver.bin 1332313088
+MO aluCtr NULL aluCtr.v vlg23/alu_ctr.bin 1332313088
+MO ctr NULL ctr.v vlg61/ctr.bin 1332313088
+MO cpuSingleCycle NULL cpuSingleCycle.v vlg0A/cpu_single_cycle.bin 1332313088
 MO memory NULL memory.v vlg69/memory.bin 1330580077
 MO register NULL reg.v vlg29/register.bin 1330580034
-MO regeister NULL reg.v vlg3A/regeister.bin 1331190838
-MO Alu NULL alu.v vlg6A/_alu.bin 1331190838
+MO regeister NULL reg.v vlg3A/regeister.bin 1332313088
+MO Alu NULL alu.v vlg6A/_alu.bin 1332313088

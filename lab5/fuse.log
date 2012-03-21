@@ -1,33 +1,15 @@
-Running: F:\Xilinx\11.1\ISE\bin\nt\unwrapped\fuse.exe -ise D:/proj/HDL/lab5/lab5/lab5.ise -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/proj/HDL/lab5/lab5/test_isim_beh.exe -prj D:/proj/HDL/lab5/lab5/test_beh.prj test glbl 
+Running: C:\Xilinx\11.1\ISE\bin\nt\unwrapped\fuse.exe -ise D:/lab5/lab5/lab5/lab5.ise -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/lab5/lab5/lab5/test_isim_beh.exe -prj D:/lab5/lab5/lab5/test_beh.prj test glbl 
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/reg.v" into library work
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/memory.v" into library work
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/ctr.v" into library work
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/aluCtr.v" into library work
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/alu.v" into library work
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/cpuSingleCycle.v" into library work
-Analyzing Verilog file "D:/proj/HDL/lab5/lab5/test.v" into library work
-Analyzing Verilog file "F:/Xilinx/11.1/ISE/verilog/src/glbl.v" into library work
-Starting static elaboration
-WARNING:HDLCompiler:189 - "D:/proj/HDL/lab5/lab5/cpuSingleCycle.v" Line 83: Size mismatch in connection of port <memWrite>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/proj/HDL/lab5/lab5/cpuSingleCycle.v" Line 84: Size mismatch in connection of port <memRead>. Formal port size is 1-bit while actual signal size is 32-bit.
-Completed static elaboration
-Fuse Memory Usage: 96288 KB
-Fuse CPU Usage: 217 ms
-Compiling module ctr
-Compiling module mem
-Compiling module regeister
-Compiling module aluCtr
-Compiling module Alu
-Compiling module pcHandler
-Compiling module cpuSingleCycle
-Compiling module test
-Compiling module glbl
-Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
-Compiled 9 Verilog Units
-Built simulation executable D:/proj/HDL/lab5/lab5/test_isim_beh.exe
-Fuse Memory Usage: 100748 KB
-Fuse CPU Usage: 295 ms
+Analyzing Verilog file "D:/lab5/lab5/lab5/reg.v" into library work
+Analyzing Verilog file "D:/lab5/lab5/lab5/memory.v" into library work
+Analyzing Verilog file "D:/lab5/lab5/lab5/ctr.v" into library work
+Analyzing Verilog file "D:/lab5/lab5/lab5/aluCtr.v" into library work
+Analyzing Verilog file "D:/lab5/lab5/lab5/alu.v" into library work
+Analyzing Verilog file "D:/lab5/lab5/lab5/cpuSingleCycle.v" into library work
+Analyzing Verilog file "D:/lab5/lab5/lab5/test.v" into library work
+ERROR:HDLCompiler:806 - "D:/lab5/lab5/lab5/test.v" Line 52: Syntax error near fast_clk.
+ERROR:HDLCompiler:60 - "D:/lab5/lab5/lab5/test.v" Line 52: fast_clk is not a type
+ERROR:HDLCompiler:598 - "D:/lab5/lab5/lab5/test.v" Line 25: Module <test> ignored due to previous errors.
+Verilog file D:/lab5/lab5/lab5/test.v ignored due to errors

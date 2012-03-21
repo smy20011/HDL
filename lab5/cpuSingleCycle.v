@@ -29,20 +29,35 @@ module pcHandler(
 always @(oldpc or jump or zero or branch or inst)
 begin
     if (jump)
-	pc <= inst[25:0];
+        pc <= inst[25:0];
     else if (branch && zero)
-	pc <= inst[15:0];
+        pc <= inst[15:0];
     else 
-	pc <= oldpc + 1;
+        pc <= oldpc + 1;
 end
 initial pc = 0;
 endmodule
 
+module diver(input fast_clk , output reg slow_clk);
+reg [22:0] buffer;
+
+always @(posedge fast_clk)
+begin
+    buffer <= buffer + 1;
+    slow_clk <= &buffer;
+end
+endmodule
+
 module cpuSingleCycle(
-    input clk,
-    input reset
+    input fast_clk,
+    input reset,
+    input clr,
+    output [31:0] out_pc
 );
 reg [31:0] pc;
+wire clk;
+diver dt(fast_clk , clk);
+assign out_pc = pc;
 wire REG_DST,
     JUMP,
     BRANCH_CPU,
@@ -82,7 +97,8 @@ mem memoryInstr(
     .writeData(0),
     .memWrite(0),
     .memRead(1),
-    .readData(instruction)
+    .readData(instruction),
+    .clr(clr)
 );
 //Êý¾Ý
 mem memoryData(
@@ -91,7 +107,8 @@ mem memoryData(
     .writeData(readData2),
     .memWrite(MEM_WRITE),
     .memRead(MEM_READ),
-    .readData(memReadData)
+    .readData(memReadData),
+    .clr(clr)
 );
 //¼Ä´æÆ÷
 regeister re(
@@ -102,7 +119,8 @@ regeister re(
     .writeData(MEM_TO_REG ? (memReadData) : (aluResult_Math)),
     .regWrite(REG_WRITE),
     .readData1(readData1),
-    .readData2(readData2)
+    .readData2(readData2),
+    .clr(clr)
 );
 //Alu Control
 aluCtr aluc(
@@ -127,9 +145,11 @@ pcHandler pch(
     .inst(instruction),
     .pc(pcoutput)
 );
-initial begin 
-    pc = 0;
+always @(negedge clk) 
+begin
+	pc <= pcoutput;
+	if (clr)
+		pc <= 0;
 end
-always @(negedge clk) pc <= pcoutput;
 
 endmodule

@@ -11,7 +11,7 @@ run
 -opt_level 1
 -iuc NO
 -lso cpuSingleCycle.lso
--keep_hierarchy NO
+-keep_hierarchy YES
 -netlist_hierarchy as_optimized
 -rtlview Yes
 -glob_opt AllClockNets

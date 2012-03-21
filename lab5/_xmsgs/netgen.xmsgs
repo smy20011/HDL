@@ -5,6 +5,12 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="NetListWriters" num="306" delta="unknown" >Signal bus <arg fmt="%s" index="1">_varindex0000</arg><arg fmt="%s" index="2">[31 : 0]</arg> on block <arg fmt="%s" index="3">mem</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="unknown" >Signal bus <arg fmt="%s" index="1">memReadData</arg><arg fmt="%s" index="2">[31 : 0]</arg> on block <arg fmt="%s" index="3">cpuSingleCycle</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
 <msg type="info" file="NetListWriters" num="633" delta="unknown" >The generated Verilog netlist contains Xilinx <arg fmt="%s" index="1">UNISIM</arg> simulation primitives and has to be used with <arg fmt="%s" index="2">UNISIM</arg> simulation library for correct compilation and simulation. 
 </msg>
 

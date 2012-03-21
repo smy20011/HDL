@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   12:36:28 03/08/2012
+// Create Date:   13:40:53 03/21/2012
 // Design Name:   cpuSingleCycle
-// Module Name:   C:/Documents and Settings/lab5/test.v
+// Module Name:   D:/lab5/lab5/lab5/test.v
 // Project Name:  lab5
 // Target Device:  
 // Tool versions:  
@@ -25,26 +25,30 @@
 module test;
 
 	// Inputs
-	reg clk;
+	reg fast_clk;
 	reg reset;
+
+	// Outputs
+	wire [31:0] out_pc;
 
 	// Instantiate the Unit Under Test (UUT)
 	cpuSingleCycle uut (
-		.clk(clk), 
-		.reset(reset)
+		.fast_clk(fast_clk), 
+		.reset(reset), 
+		.out_pc(out_pc)
 	);
 
 	initial begin
 		// Initialize Inputs
-		clk = 0;
+		fast_clk = 0;
 		reset = 0;
-		
+
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
 
 	end
-   always #50 clk = ~clk;
+	always #10ps fast_clk = ~fast_clk;
 endmodule
 

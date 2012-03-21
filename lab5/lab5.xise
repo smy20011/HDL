@@ -39,11 +39,17 @@
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
+    <file xil_pn:name="cpuSingleCycle.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation"/>
+    </file>
     <file xil_pn:name="test.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="PostRouteSimulation"/>
       <association xil_pn:name="PostMapSimulation"/>
       <association xil_pn:name="PostTranslateSimulation"/>
+    </file>
+    <file xil_pn:name="MIPS_scope.cdc" xil_pn:type="FILE_CDC">
+      <association xil_pn:name="Implementation"/>
     </file>
   </files>
 
@@ -54,6 +60,7 @@
     <property xil_pn:name="Fitter Report Format" xil_pn:value="HTML"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Module|cpuSingleCycle"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/cpuSingleCycle"/>
+    <property xil_pn:name="Keep Hierarchy" xil_pn:value="Yes"/>
     <property xil_pn:name="PROP_BehavioralSimTop" xil_pn:value="Module|test"/>
     <property xil_pn:name="PROP_DesignName" xil_pn:value="lab5"/>
     <property xil_pn:name="Package" xil_pn:value="fg320"/>
@@ -62,6 +69,7 @@
     <property xil_pn:name="Simulator" xil_pn:value="ISim (VHDL/Verilog)"/>
     <property xil_pn:name="Speed Grade" xil_pn:value="-4"/>
     <property xil_pn:name="Synthesis Tool" xil_pn:value="XST (VHDL/Verilog)"/>
+    <property xil_pn:name="Target UCF File Name" xil_pn:value="cpuSingleCycle.ucf"/>
     <property xil_pn:name="Top-Level Source Type" xil_pn:value="HDL"/>
     <property xil_pn:name="Verbose Property Persistence" xil_pn:value="false"/>
   </properties>

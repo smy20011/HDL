@@ -19,31 +19,30 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module regeister(
-		input clock_in,
-		input [25:21] readReg1,
-		input [20:16] readReg2,
-		input [4:0] writeReg,
-		input [31:0] writeData,
-		input regWrite,
-		output reg [31:0] readData1,
-		output reg [31:0] readData2
-    );
-	 reg [31:0] regFile[31:0];
-	 always @(readReg1 or readReg2 or regWrite)
-	 begin
-			readData1 <= regFile[readReg1];
-			readData2 <= regFile[readReg2];
-	 end
-	 always @(negedge clock_in)
-	 begin
-		if (regWrite == 1)
-			regFile[writeReg] <= writeData;
-	 end
-	 
+    input clock_in,
+    input [25:21] readReg1,
+    input [20:16] readReg2,
+    input [4:0] writeReg,
+    input [31:0] writeData,
+    input regWrite,
+    input clr,
+    output reg [31:0] readData1,
+    output reg [31:0] readData2
+);
+reg [31:0] regFile[31:0];
 integer i;
-initial begin
-	
-	for (i = 0 ; i != 32 ; i = i + 1)
-		regFile[i] = 0;
+always @(readReg1 or readReg2 or regWrite)
+begin
+    readData1 <= regFile[readReg1];
+    readData2 <= regFile[readReg2];
 end
-endmodule
+always @(negedge clock_in)
+begin
+    if (regWrite == 1)
+        regFile[writeReg] <= writeData;
+    if (clr)
+        for (i = 0 ; i != 32 ; i = i + 1)
+            regFile[i] <= 0;
+    end
+
+    endmodule

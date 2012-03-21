@@ -2,12 +2,11 @@ Release 11.1 ngdbuild L.33 (nt)
 Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\11.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise lab5.ise
--intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc
-cpuSingleCycle.ngd
+-intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4
+cpuSingleCycle_cs.ngc cpuSingleCycle.ngd
 
-Reading NGO file "C:/Documents and Settings/lab5/cpuSingleCycle.ngc" ...
-Loading design module "C:\Documents and Settings\lab5/cpuSingleCycle.ngc"...
-WARNING:NgdBuild:578 - Design contains no instances.
+Reading NGO file "D:/lab5/lab5/lab5/cpuSingleCycle_cs.ngc" ...
+Reading in constraint information from 'cpuSingleCycle.ucf'...
 Gathering constraint information from source properties...
 Done.
 
@@ -17,6 +16,11 @@ Done...
 Checking Partitions ...
 
 Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'ALU_OP<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'MEM_WRITE' has no driver
+WARNING:NgdBuild:452 - logical net 'aluCtr<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'aluCtr<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'aluCtr<3>' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -27,9 +31,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   5
 
-Total memory usage is 79180 kilobytes
+Total memory usage is 83276 kilobytes
 
 Writing NGD file "cpuSingleCycle.ngd" ...
 Total REAL time to NGDBUILD completion:  1 sec
