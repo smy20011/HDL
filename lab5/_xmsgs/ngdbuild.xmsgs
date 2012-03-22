@@ -5,6 +5,43 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="ConstraintSystem" num="56" delta="unknown" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_J_CLK = PERIOD &quot;J_CLK&quot; 30000.000000 pS HIGH 50.000000 %;&gt;</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">J_CLK</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="unknown" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_J = FROM &quot;U_CLK&quot; TO &quot;J_CLK&quot; 15000.000000000 pS;&gt;</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TimeGrp&apos; or &apos;TNM&apos; or &apos;TPSync&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">U_CLK</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="unknown" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_J = FROM &quot;U_CLK&quot; TO &quot;J_CLK&quot; 15000.000000000 pS;&gt;</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TimeGrp&apos; or &apos;TNM&apos; or &apos;TPSync&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">J_CLK</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="unknown" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_U = FROM &quot;U_CLK&quot; TO &quot;U_CLK&quot; 15000.000000000 pS;&gt;</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TimeGrp&apos; or &apos;TNM&apos; or &apos;TPSync&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">U_CLK</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="unknown" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_U = FROM &quot;U_CLK&quot; TO &quot;U_CLK&quot; 15000.000000000 pS;&gt;</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TimeGrp&apos; or &apos;TNM&apos; or &apos;TPSync&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">U_CLK</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="unknown" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_J = FROM &quot;U_CLK&quot; TO &quot;J_CLK&quot; 15000.000000000 pS;&gt;</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="unknown" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_U = FROM &quot;U_CLK&quot; TO &quot;U_CLK&quot; 15000.000000000 pS;&gt;</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="190" delta="unknown" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">J_CLK</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_J_CLK</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM and PERIOD are derived only if the PERIOD constraint is the only referencing constraint and if an output of the clock manager block drives flip-flops, latches or RAMs.  
+This TNM is used in the following user groups and/or specifications:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_J_CLK = PERIOD &quot;J_CLK&quot; 30000.000000 pS HIGH 50.000000 %;&gt;
+&lt;TIMESPEC TS_U_TO_J = FROM &quot;U_CLK&quot; TO &quot;J_CLK&quot; 15000.000000000 pS;&gt;
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="unknown" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_J_CLK = PERIOD &quot;J_CLK&quot; 30000.000000 pS HIGH 50.000000 %;&gt;</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="unknown" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_U_TO_J = FROM &quot;U_CLK&quot; TO &quot;J_CLK&quot; 15000.000000000 pS;&gt;</arg>
+</msg>
+
 <msg type="warning" file="NgdBuild" num="452" delta="unknown" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ALU_OP&lt;1&gt;</arg>&apos; has no driver
 </msg>
 

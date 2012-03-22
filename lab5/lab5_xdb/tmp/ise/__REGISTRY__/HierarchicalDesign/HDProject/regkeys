@@ -2,7 +2,7 @@ CommandLine-Map
 
 s
 CommandLine-Ngdbuild
-C:\Xilinx\11.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise lab5.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle_cs.ngc cpuSingleCycle.ngd
+F:\Xilinx\11.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise lab5.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpuSingleCycle.ngc cpuSingleCycle.ngd
 s
 CommandLine-Par
 

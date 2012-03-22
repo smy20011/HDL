@@ -10,99 +10,82 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.51 $
-Mapped Date    : Wed Mar 21 15:29:25 2012
+Mapped Date    : Thu Mar 22 10:48:09 2012
 
-WARNING:LIT:243 - Logical network ALU_OP<1> has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 5
-   more times for the following (max. 5 shown):
-   MEM_WRITE,
-   aluCtr<0>,
-   aluCtr<1>,
-   aluCtr<3>,
-   reset
-   To see the details of these warning messages, please use the -detail switch.
-Mapping design into LUTs...
-WARNING:MapLib:328 - Block aluc is not a recognized logical block. The mapper
-   will continue to process the design but there may be design problems if this
-   block does not get trimmed.
-WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
-   symbol "ctr/physical_group_aluOp<0>/aluOp<0>_BUFG" (output signal=ALU_OP<0>)
-   has a mix of clock and non-clock loads. Some of the non-clock loads are
-   (maximum of 5 listed):
-   Pin I0 of alu_math/_old_aluRes_5_9__and00011
-   Pin I1 of alu_math/_old_aluRes_5_9__and00001
-   Pin I0 of alu_math/_old_aluRes_5_8__and00011
-   Pin I1 of alu_math/_old_aluRes_5_8__and00001
-   Pin I0 of alu_math/_old_aluRes_5_7__and00011
-WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
-   symbol "ctr/physical_group_memToReg/memRead_BUFG" (output signal=ALU_SRC) has
-   a mix of clock and non-clock loads. Some of the non-clock loads are (maximum
-   of 5 listed):
-   Pin I0 of _mux0002<9>1
-   Pin I0 of _mux0002<8>1
-   Pin I0 of _mux0002<31>1
-   Pin I0 of _mux0002<30>1
-   Pin I0 of _mux0002<29>1
-Running directed packing...
-Running delay-based LUT packing...
-Running related packing...
-Updating timing models...
-WARNING:PhysDesignRules:367 - The signal <re/GLOBAL_LOGIC0> is incomplete. The
-   signal does not drive any load pins in the design.
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+ERROR:Security:7 - A feature for ISE was found but is for the wrong hostid.
+ERROR:Security:9 - No 'ISE' nor 'WebPack' feature was available for part
+'xc3s500e'.
+----------------------------------------------------------------------
+No such feature exists.
+Feature:       WebPack
+License path: 
+C:/.Xilinx\XilinxISE11.1_license.lic;C:/.Xilinx\Xilinx_ISE11.1_license2.lic;F:\X
+ilinx\11.1\ISE/data\*.lic;F:\Xilinx\11.1\EDK/data/core_licenses\apu_fpu_v2_flexl
+m.lic;F:\Xilinx\11.1\EDK/data/core_licenses\apu_fpu_virtex5_v1_flexlm.lic;F:\Xil
+inx\11.1\EDK/data/core_licenses\opb_atmc_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/d
+ata/core_licenses\opb_atmc_v2_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licen
+ses\opb_can_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernetlite
+_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernetlite_v1_fl
+exlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_j_flexlm.lic;F
+:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_k_flexlm.lic;F:\Xilinx\1
+1.1\EDK/data/core_licenses\opb_ethernet_v1_00_l_flexlm.lic;F:\Xilinx\11.1\EDK/da
+ta/core_licenses\opb_ethernet_v1_00_m_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_li
+censes\opb_ethernet_v1_01_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb
+_ethernet_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_hdlc_v1_00_b_f
+lexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_hdlc_v1_flexlm.lic;F:\Xilinx
+\11.1\EDK/data/core_licenses\opb_hdlc_v2_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data
+/core_licenses\opb_hdlc_v2_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_
+iic_v1_01_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_iic_v1_01_b_fle
+xlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_iic_v1_flexlm.lic;F:\Xilinx\11
+.1\EDK/data/core_licenses\opb_pci_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/cor
+e_licenses\opb_pci_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_
+pci_v1_00_c_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_pci_v1_flexlm.l
+ic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_uart16550_v1_00_c_flexlm.lic;F:\Xil
+inx\11.1\EDK/data/core_licenses\opb_uart16550_v1_flexlm.lic;F:\Xilinx\11.1\EDK/d
+ata/core_licenses\opb_usb2_device_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_lic
+enses\plbv46_pcie_v3_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plbv46_pci
+_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_atmc_v1_00_a_flexlm.lic
+;F:\Xilinx\11.1\EDK/data/core_licenses\plb_ethernet_v1_00_a_flexlm.lic;F:\Xilinx
+\11.1\EDK/data/core_licenses\plb_ethernet_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/
+core_licenses\plb_gemac_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses
+\plb_gemac_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_gemac_v1
+_01_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_gemac_v2_flexlm.lic;F
+:\Xilinx\11.1\EDK/data/core_licenses\plb_pci_v1_flexlm.lic;F:\Xilinx\11.1\EDK/da
+ta/core_licenses\plb_rapidio_lvds_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/cor
+e_licenses\plb_rapidio_lvds_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\
+plb_temac_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_uart16550_v1_0
+0_b_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\plb_uart16550_v1_00_c_flexl
+m.lic;F:\Xilinx\11.1\EDK/data/core_licenses\soft_temac_wrap_v1_flexlm.lic;F:\Xil
+inx\11.1\EDK/data/core_licenses\soft_temac_wrap_v2_flexlm.lic;[...]
+FLEXnet Licensing error:-5,357.  System Error: 2 ""
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".Invalid host.
+ The hostid of this system does not match the hostid
+ specified in the license file.
+Feature:       ISE
+Hostid:        001485346eab
+License path: 
+C:/.Xilinx\XilinxISE11.1_license.lic;C:/.Xilinx\Xilinx_ISE11.1_license2.lic;F:\X
+ilinx\11.1\ISE/data\*.lic;F:\Xilinx\11.1\EDK/data/core_licenses\apu_fpu_v2_flexl
+m.lic;F:\Xilinx\11.1\EDK/data/core_licenses\apu_fpu_virtex5_v1_flexlm.lic;F:\Xil
+inx\11.1\EDK/data/core_licenses\opb_atmc_v1_00_b_flexlm.lic;F:\Xilinx\11.1\EDK/d
+ata/core_licenses\opb_atmc_v2_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licen
+ses\opb_can_v1_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernetlite
+_v1_00_a_flexlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernetlite_v1_fl
+exlm.lic;F:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_v1_00_j_flexlm.lic;F
+:\Xilinx\11.1\EDK/data/core_licenses\opb_ethernet_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
 
 Design Summary
 --------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:    6
-Logic Utilization:
-  Total Number Slice Registers:         702 out of   9,312    7%
-    Number used as Flip Flops:          650
-    Number used as Latches:              52
-  Number of 4 input LUTs:               901 out of   9,312    9%
-Logic Distribution:
-  Number of occupied Slices:            987 out of   4,656   21%
-    Number of Slices containing only related logic:     987 out of     987 100%
-    Number of Slices containing unrelated logic:          0 out of     987   0%
-      *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,154 out of   9,312   12%
-    Number used as logic:               784
-    Number used as a route-thru:        253
-    Number used as Shift registers:     117
-
-  The Slice Logic Distribution report is not meaningful if the design is
-  over-mapped for a non-slice resource or if Placement fails.
-
-  Number of bonded IOBs:                 34 out of     232   14%
-  Number of RAMB16s:                      2 out of      20   10%
-  Number of BUFGMUXs:                     5 out of      24   20%
-  Number of BSCANs:                       1 out of       1  100%
-
-  Number of RPM macros:           13
-Average Fanout of Non-Clock Nets:                2.63
-
-Peak Memory Usage:  187 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
-
-NOTES:
-
-   Related logic is defined as being logic that shares connectivity - e.g. two
-   LUTs are "related" if they share common inputs.  When assembling slices,
-   Map gives priority to combine logic that is related.  Doing so results in
-   the best timing performance.
-
-   Unrelated logic shares no connectivity.  Map will only begin packing
-   unrelated logic into a slice once 99% of the slices are occupied through
-   related logic packing.
-
-   Note that once logic distribution reaches the 99% level through related
-   logic packing, this does not mean the device is completely utilized.
-   Unrelated logic packing will then begin, continuing until all usable LUTs
-   and FFs are occupied.  Depending on your timing budget, increased levels of
-   unrelated logic packing may adversely affect the overall timing performance
-   of your design.
-
-Mapping completed.
-See MAP report file "cpuSingleCycle_map.mrp" for details.
+Number of errors   :   1
+Number of warnings :   0

@@ -16,7 +16,7 @@ WARNING:NetListWriters:306 - Signal bus memReadData[31 : 0] on block
    cpuSingleCycle is not reconstructed, because there are some missing bus
    signals.
 Writing Verilog netlist file
-'D:\lab5\lab5\lab5\netgen\synthesis\cpuSingleCycle_synthesis.v' ...
+'D:\proj\HDL\lab5\lab5\netgen\synthesis\cpuSingleCycle_synthesis.v' ...
 INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
    simulation primitives and has to be used with UNISIM simulation library for
    correct compilation and simulation. 
@@ -30,4 +30,4 @@ INFO:NetListWriters:665 - For more information on how to pass the SDF switches
    to the simulator, see your Simulator tool documentation.
 Number of warnings: 2
 Number of info messages: 4
-Total memory usage is 68876 kilobytes
+Total memory usage is 96988 kilobytes

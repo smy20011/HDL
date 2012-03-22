@@ -39,16 +39,13 @@
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="cpuSingleCycle.ucf" xil_pn:type="FILE_UCF">
-      <association xil_pn:name="Implementation"/>
-    </file>
     <file xil_pn:name="test.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="PostRouteSimulation"/>
       <association xil_pn:name="PostMapSimulation"/>
       <association xil_pn:name="PostTranslateSimulation"/>
     </file>
-    <file xil_pn:name="MIPS_scope.cdc" xil_pn:type="FILE_CDC">
+    <file xil_pn:name="cpuSingleCycle.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation"/>
     </file>
   </files>

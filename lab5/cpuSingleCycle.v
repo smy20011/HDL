@@ -33,13 +33,13 @@ begin
     else if (branch && zero)
         pc <= inst[15:0];
     else 
-        pc <= oldpc + 1;
+	pc <= oldpc + 1;
 end
 initial pc = 0;
 endmodule
 
 module diver(input fast_clk , output reg slow_clk);
-reg [22:0] buffer;
+reg [0:0] buffer;
 
 always @(posedge fast_clk)
 begin
@@ -50,14 +50,13 @@ endmodule
 
 module cpuSingleCycle(
     input fast_clk,
-    input reset,
     input clr,
-    output [31:0] out_pc
+    input [31:0] address,
+    output [31:0] data
 );
 reg [31:0] pc;
 wire clk;
 diver dt(fast_clk , clk);
-assign out_pc = pc;
 wire REG_DST,
     JUMP,
     BRANCH_CPU,
@@ -120,6 +119,8 @@ regeister re(
     .regWrite(REG_WRITE),
     .readData1(readData1),
     .readData2(readData2),
+    .outsideAddress(address),
+    .outsideReadData(data),
     .clr(clr)
 );
 //Alu Control
@@ -147,9 +148,9 @@ pcHandler pch(
 );
 always @(negedge clk) 
 begin
-	pc <= pcoutput;
-	if (clr)
-		pc <= 0;
+    pc <= pcoutput;
+    if (clr)
+	pc <= 0;
 end
 
 endmodule
